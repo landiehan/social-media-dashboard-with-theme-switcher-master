@@ -1,8 +1,5 @@
 .banner {
-  // background-color: var(--bg-top-pattern);
-  // border-radius: 0 0 2rem 2rem;
-
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 521px) {
     display: flex;
     justify-content: space-between;
   }
@@ -10,6 +7,10 @@
   &__heading-wrapper {
     padding: 2rem 0;
     border-bottom: 1px solid var(--text);
+    @media screen and (min-width: 521px) {
+      border: none;
+      padding-bottom: 4rem;
+    }
   }
   
   &__heading {

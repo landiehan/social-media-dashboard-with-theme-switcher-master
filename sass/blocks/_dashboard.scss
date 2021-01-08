@@ -1,13 +1,39 @@
 .dashboard {
-  width: 375px;
-  @media screen and (min-width: 600px) {
-    width: 768px;
-  }
+  min-width: 295px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  // @media screen and (min-width: 576px) {
+  //   width: 576px;
+  // }
   padding: 0 2.5rem;
 
   &__followers {
     > li {
       margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 576px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      > li {
+        margin-top: 0;
+        width: 270px;
+        &:nth-child(1),
+        &:nth-child(3) {
+          justify-self: right;
+        }
+      }
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      > li {
+        width: 100%;
+      }
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
     }
   }
 
@@ -20,7 +46,17 @@
     &__stats {
       > li {
         margin-top: 2rem;
-      }    
+      }
+      @media screen and (min-width: 480px) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(230px, 250px));
+        justify-content: center;
+        column-gap: 2rem;
+      }  
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, 1fr);
+      } 
     }
   }
 }
