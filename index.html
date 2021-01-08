@@ -5,83 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Frontend Mentor | Social Media Dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin: 1rem 0; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <div class="dashboard">
+    <header class="dashboard__banner banner">
+      <div class="banner__heading-wrapper">
+        <h1 class="banner__heading">Social Media Dashboard</h1>
+        <h2 class="banner__sub-heading" id="followers">Total Followers: 23,004</h2>      
+      </div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+      <div class="banner__toggle-wrapper toggle">
+        <label class="toggle__label" for="toggle">Dark Mode</label>
+        <div class="toggle__slider-container">
+          <input class="toggle__slider" type="checkbox" id="toggle" checked>
+          <div class="toggle__bg"></div>
+        </div>
+      </div>     
+    </header>
+    
+    <main>
+      <section aria-labelledby="followers">
+        <ul class="dashboard__followers">
+          <!-- facebook -->
+          <li class="card card--facebook">
+            <h3 class="card__heading"><img src="./images/icon-facebook.svg" alt="facebook">@nathanf</h3>
+            <p>
+              <span class="card__wrapper">
+                <span class="card__property">Followers</span>
+                <span class="card__value">1987</span>
+              </span>
+              <span class="card__change card__change--up"><img src="./images/icon-up.svg" alt="increased"> 12 Today</span>
+            </p>
+          </li>
+          <!-- twitter -->
+          <li class="card card--twitter">
+            <h3 class="card__heading"><img src="./images/icon-twitter.svg" alt="twitter">@nathanf</h3>
+            <p>
+              <span class="card__wrapper">
+                <span class="card__property">Followers</span>
+                <span class="card__value">1044</span>
+              </span>
+              <span class="card__change card__change--up"><img src="./images/icon-up.svg" alt="increased"> 99 Today</span>
+            </p>
+          </li>
+          <!-- instagram -->
+          <li class="card card--instagram">
+            <h3 class="card__heading"><img src="./images/icon-instagram.svg" alt="instagram">@nathanf</h3>
+            <p>
+              <span class="card__wrapper">
+                <span class="card__property">Followers</span>
+                <span class="card__value">11k</span>
+              </span>
+              <span class="card__change card__change--up"><img src="./images/icon-up.svg" alt="increased"> 1099 Today</span>
+            </p>
+          </li>
+          <!-- youtube -->
+          <li class="card card--youtube">
+            <h3 class="card__heading"><img src="./images/icon-youtube.svg" alt="youtube">Nathan F.</h3>
+            <p>
+              <span class="card__wrapper">
+                <span class="card__property">Subscribers</span>
+                <span class="card__value">8239</span>
+              </span>
+              <span class="card__change card__change--down"><img src="./images/icon-down.svg" alt="decreased"> 144 Today</span>
+            </p>
+          </li>
+        </ul>         
+      </section>
+       
+      <h2 class="overview__heading">Overview - Today</h2>
 
-  Dark Mode
+      <ul class="overview__stats">
+        <!-- facebook__page-views -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Page Views</span>
+              <img src="./images/icon-facebook.svg" alt="of facebook">              
+            </span>
 
-  
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">87</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-up.svg" alt="increased"> 3%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- facebook__likes -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Likes</span>
+              <img src="./images/icon-facebook.svg" alt="of facebook">              
+            </span>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">52</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-down.svg" alt="decreased"> 2%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- instagram__likes -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Likes</span>
+              <img src="./images/icon-instagram.svg" alt="of facebook">              
+            </span>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">5462</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-up.svg" alt="increased"> 2257%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- instagram__profile-views -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Profile Views</span>
+              <img src="./images/icon-instagram.svg" alt="of facebook">              
+            </span>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">52k</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-up.svg" alt="increased"> 1375%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- twitter__retweets -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Retweets</span>
+              <img src="./images/icon-twitter.svg" alt="of facebook">              
+            </span>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">117</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-up.svg" alt="increased"> 303%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- twitter__likes -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Likes</span>
+              <img src="./images/icon-twitter.svg" alt="of facebook">              
+            </span>
 
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">507</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-up.svg" alt="increased"> 553%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- youtube__likes -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Likes</span>
+              <img src="./images/icon-youtube.svg" alt="of facebook">              
+            </span>
 
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">107</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-down.svg" alt="decreased"> 19%</span>              
+            </span>
+          </p>
+        </li>
+        <!-- youtube__total-views -->
+        <li>
+          <p class="card card--small">
+            <span class="card__wrapper--small">
+              <span class="card__property--small">Total Views</span>
+              <img src="./images/icon-youtube.svg" alt="of facebook">              
+            </span>
 
-  Overview - Today
+            <span class="card__wrapper--small">
+              <span class="card__value card__value--small">1407</span>
+              <span class="card__change card__change--small card__change--up"><img src="./images/icon-down.svg" alt="decreased"> 12%</span>              
+            </span>
+          </p>
+        </li>
+      </ul>
+    </main>
+  </div>
 
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Landay</a>.
   </div>
+
+  <script src="./scripts/ThemeToggle.js"></script>
 </body>
 </html>
