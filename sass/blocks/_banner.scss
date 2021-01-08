@@ -1,0 +1,30 @@
+.banner {
+  // background-color: var(--bg-top-pattern);
+  // border-radius: 0 0 2rem 2rem;
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading-wrapper {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--text);
+  }
+  
+  &__heading {
+    font-size: 2.5rem;
+    color: var(--text-num);
+  }
+  
+  &__sub-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: .4rem;
+    color: var(--text);
+  }
+  
+  &__toggle-wrapper {
+    padding: 2rem 0;
+  }
+}

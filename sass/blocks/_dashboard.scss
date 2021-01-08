@@ -1,0 +1,26 @@
+.dashboard {
+  width: 375px;
+  @media screen and (min-width: 600px) {
+    width: 768px;
+  }
+  padding: 0 2.5rem;
+
+  &__followers {
+    > li {
+      margin-top: 2rem;
+    }
+  }
+
+  .overview {
+    &__heading {
+      margin: 4rem 0 3rem;
+      color: var(--text);
+    }
+  
+    &__stats {
+      > li {
+        margin-top: 2rem;
+      }    
+    }
+  }
+}
