@@ -1,0 +1,42 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle__label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.toggle__slider-container {
+  width: 48px;
+  height: 24px;
+  border-radius: 9999px;
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle__slider {
+  appearance: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bg);
+  position: absolute;
+  top: 50%;
+  // transform-origin: translateY(-50%);
+  transform: translate(25px, -50%);
+  transition: transform .4s ease-in-out;
+}
+
+/* this is for the toggle of gradient background */
+.toggle__bg { 
+  height: 100%;
+  background: var(--toggle);
+}
+
+.toggle__slider:checked {
+  transform: translate(3px, -50%);
+}
